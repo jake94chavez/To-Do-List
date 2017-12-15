@@ -1,5 +1,7 @@
 const allPosts = [];
-
+const $delBut = "<button class='delete'>Remove</button>"
+const $doneBut = "<button class='done'>Complete</button>"
+const $impBut = "<button class='important'>Priority</button>"
 // Runs post functionality if button is clicked
 $( '#button' ).click(function() {
 	fieldValue();
@@ -21,7 +23,13 @@ const makeAPost = () => {
 	let $postText = allPosts[allPosts.length-1];
 	// Adds the new list element to the HTML
 	$listItem.append($postText);
-	$history.append($listItem);	
+	$history.append($listItem);
+	// Adds buttons to each list item
+	$listItem.append($impBut + $doneBut + $delBut);
+	// Adds button functionality to each list item
+	deleteButton();
+	completeButton();
+	impButton();
 }
 
 // Sets the input to be added to the list and alerts the user if nothing is in the input field
@@ -37,4 +45,26 @@ const fieldValue = () => {
 	$('#submission').val(null);
 	makeAPost();
 	}
-}
+};
+
+// The following set up functionality for 3 different buttons that can be used to modify the list
+const deleteButton = () => {
+	$('.delete').click((event) => {
+		$(event.target).parent().remove();
+		$(event.target).remove();
+	})
+};
+
+const completeButton = () => {
+	$('.done').click((event) => {
+		$(event.target).parent().css("text-decoration", "line-through");
+		$(event.target).remove();
+	})
+};
+
+const impButton = () => {
+	$('.important').click((event) => {
+		$(event.target).parent().css({"color": "red", "text-transform": 'uppercase'});
+		$(event.target).remove();
+	})
+};
