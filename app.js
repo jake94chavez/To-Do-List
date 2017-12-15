@@ -1,7 +1,8 @@
 const allPosts = [];
-const $delBut = "<button class='delete'>Remove</button>"
-const $doneBut = "<button class='done'>Complete</button>"
-const $impBut = "<button class='important'>Priority</button>"
+const $delBut = "<button class='delete btn btn-primary btn-success'>Remove</button>"
+const $doneBut = "<button class='done btn btn-primary btn-success'>Complete</button>"
+const $impBut = "<br><button class='important btn btn-primary btn-success'>Priority</button>"
+
 // Runs post functionality if button is clicked
 $( '#button' ).click(function() {
 	fieldValue();
@@ -51,7 +52,6 @@ const fieldValue = () => {
 const deleteButton = () => {
 	$('.delete').click((event) => {
 		$(event.target).parent().remove();
-		$(event.target).remove();
 	})
 };
 
@@ -65,7 +65,7 @@ const completeButton = () => {
 
 const impButton = () => {
 	$('.important').click((event) => {
-		$(event.target).parent().css({"color": "red", "text-transform": 'uppercase'});
+		$(event.target).parent().css({"color": "#32CD32", "text-transform": 'uppercase'});
 		$(event.target).remove();
 	})
 };

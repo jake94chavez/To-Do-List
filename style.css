@@ -1,0 +1,41 @@
+.done .delete .important {
+	margin-left: 50px;
+}
+
+ul {
+	width: 50%;
+}
+
+h1 {
+	text-align: center;
+	color: white;
+	margin-top: 2%;
+}
+
+#button {
+	margin: auto;
+	display: block;
+	margin-top: 20px;
+
+}
+
+#submission {
+	width: 50%;
+	margin: 0 auto;
+	display: block;
+	text-align: left;
+}
+
+.listdiv {
+	margin: 0 auto;
+	width: 40%;
+	/*background-color: #F2E146;*/
+}
+
+body {
+	background-color: #FF93D0;
+}
+
+li {
+	color: white;
+}
