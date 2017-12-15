@@ -58,6 +58,7 @@ const deleteButton = () => {
 const completeButton = () => {
 	$('.done').click((event) => {
 		$(event.target).parent().css("text-decoration", "line-through");
+		$(event.target).prev().remove();
 		$(event.target).remove();
 	})
 };
