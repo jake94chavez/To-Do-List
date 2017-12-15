@@ -20,7 +20,7 @@ h1 {
 }
 
 #submission {
-	width: 50%;
+	width: 40%;
 	margin: 0 auto;
 	display: block;
 	text-align: left;
@@ -38,4 +38,5 @@ body {
 
 li {
 	color: white;
+	font-size: 25px;
 }

@@ -65,7 +65,7 @@ const completeButton = () => {
 
 const impButton = () => {
 	$('.important').click((event) => {
-		$(event.target).parent().css({"color": "#32CD32", "text-transform": 'uppercase'});
+		$(event.target).parent().css({"color": "red", "text-transform": 'uppercase'});
 		$(event.target).remove();
 	})
 };
